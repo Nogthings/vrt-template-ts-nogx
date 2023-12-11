@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { IoArrowForward } from "react-icons/io5";
+import CardProps from "./types";
 
-function Card({ title, children, to, button }: CarddProps) {
+function Card({ title, children, to, button }: Readonly<CardProps>) {
   return (
     <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
       <a href="#">
@@ -14,13 +15,6 @@ function Card({ title, children, to, button }: CarddProps) {
       </Link>
     </div>
   );
-}
-
-interface CarddProps {
-  title: string;
-  children: React.ReactNode;
-  to: string;
-  button: string;
 }
 
 export default Card;

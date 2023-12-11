@@ -12,7 +12,7 @@ import ErrorBoundary from "./pages/error";
 
 function HomeLayout() {
   return (
-    <div className="bg-slate-700">
+    <div className="bg-gray-200 dark:bg-slate-700">
       <Header />
       <ErrorBoundary fallback404={<NotFound />}>
         <div className="px-10 lg:px-96 py-10">
