@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 
 // Icons
 import { IoCartOutline } from "react-icons/io5";
+import { BsToggleOff, BsToggleOn } from "react-icons/bs";
 
 function Header() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -25,27 +26,27 @@ function Header() {
         Nogx
       </h1>
       <div className="flex items-center">
-        <ul className="flex items-center space-x-6">
-          <li className="font-semibold text-gray-700 dark:text-gray-100 hover:text-sky-500">
+        <ul className="flex items-center space-x-6 ">
+          <li className="font-semibold text-gray-700 dark:text-gray-100 hover:text-purple-700 dark:hover:text-purple-300  ">
             <button
               className={`${
-                isDarkMode ? "bg-blue-500" : "bg-gray-500"
-              } text-white px-4 py-2 rounded-md`}
+                isDarkMode ? "text-gray-100" : "text-dark"
+              } flex items-center text-lg`}
               onClick={toggleDarkMode}
             >
-              {isDarkMode ? "ON" : "OFF"}
+              {isDarkMode ? <BsToggleOn /> : <BsToggleOff />}
             </button>
           </li>
-          <li className="font-semibold text-gray-700 dark:text-gray-100 hover:text-sky-500">
+          <li className="font-semibold text-gray-700 dark:text-gray-100 hover:text-purple-700 dark:hover:text-purple-300  ">
             <Link to="/">Home</Link>
           </li>
-          <li className="font-semibold text-gray-700 dark:text-gray-100 hover:text-sky-500">
+          <li className="font-semibold text-gray-700 dark:text-gray-100 hover:text-purple-700 dark:hover:text-purple-300  ">
             <Link to="/store">Store</Link>
           </li>
-          <li className="font-semibold text-gray-700 dark:text-gray-100 hover:text-sky-500">
+          <li className="font-semibold text-gray-700 dark:text-gray-100 hover:text-purple-700 dark:hover:text-purple-300  ">
             <Link to="/blog">Blog</Link>
           </li>
-          <li className="font-semibold text-gray-700 dark:text-gray-100 hover:text-sky-500 cursor-pointer">
+          <li className="font-semibold text-gray-700 dark:text-gray-100 hover:text-purple-700 dark:hover:text-purple-300   cursor-pointer">
             <IoCartOutline />
           </li>
         </ul>
