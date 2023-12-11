@@ -1,3 +1,5 @@
+import Card from "../../../components/card";
+
 function Home() {
   return (
     <div className="h-screen">
@@ -7,6 +9,10 @@ function Home() {
         <p className="text-gray-700 dark:text-gray-200 mt-4">¡Bienvenido a Nogx - Una forma más rápida de comenzar con React, Vite, React Icons y Tailwind CSS!</p>
         <p className="text-gray-700 dark:text-gray-200 mt-4">Para comenzar, a usar esta platilla solo tiene que clonar el <a href="#" target="_blank" className="font-bold text-sky-500 hover:text-sky-300">repositorio git</a> en el directorio de su eleccion. </p>
       </main>
+
+      <Card title="Vite" to="/store" button="Ir a la tienda" >
+        Vite es un nuevo compilador de frontend que sirve como reemplazo de desarrollo para webpack.
+      </Card>
     </div>
   );
 }
