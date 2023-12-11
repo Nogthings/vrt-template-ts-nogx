@@ -38,10 +38,22 @@ function Home() {
           </div>
         </main>
 
-        <Card title="Vite" to="/store" button="Ir a la tienda">
-          Vite es un nuevo compilador de frontend que sirve como reemplazo de
-          desarrollo para webpack.
-        </Card>
+        <h2 className="mt-6 text-lg text-gray-700 dark:text-gray-100 font-semibold text-center">
+          Conoce las tecnologias que usa esta plantilla
+        </h2>
+        <div className="flex justify-center items-center space-x-4 mt-2">
+          <Card title="Vite" to="/store" button="Ir a la tienda">
+            Vite es un nuevo compilador de frontend que sirve como reemplazo de
+            desarrollo para webpack.
+          </Card>
+          <Card title="Tailwind CSS" to="/blog" button="Ir al blog">
+            Tailwind CSS es un framework CSS de utilidad de bajo nivel que le
+            permite crear rápidamente interfaces de usuario personalizadas.
+          </Card>
+          <Card title="React Icons" to="/blog" button="Ir al blog">
+            React Icons es una libreria de iconos para React.
+          </Card>
+        </div>
       </Box>
     </div>
   );
