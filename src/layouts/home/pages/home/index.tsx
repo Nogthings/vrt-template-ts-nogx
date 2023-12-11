@@ -31,7 +31,11 @@ function Home() {
             repositorio limpio (Cambia my-project por el nombre que le quieras
             dar a tu proyecto).{" "}
           </p>
-          <Command>npx degit Nogthings/vrt-template-ts-nogx my-proyect</Command>
+          <div className="flex items-center justify-center m-4">
+            <Command>
+              npx degit Nogthings/vrt-template-ts-nogx my-proyect
+            </Command>
+          </div>
         </main>
 
         <Card title="Vite" to="/store" button="Ir a la tienda">

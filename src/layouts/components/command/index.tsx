@@ -9,12 +9,15 @@ function Command({ children }: Readonly<CommandProps>) {
     setCopied(true);
   };
   return (
-    <div className="flex space-x-4 px-4 py-2 bg-gray-800 dark:bg-gray-600 text-white rounded-md">
+    <div
+      className="flex items-center justify-center space-x-4 px-4 py-2 bg-gray-800 dark:bg-gray-600 text-white rounded-md"
+      style={{ maxWidth: "max-content" }}
+    >
       <pre>
-        <code>{children}</code>
+        <code className="font-semibold">{children}</code>
       </pre>
       <button
-        className="text-center text-white px-2 items-center p-1 rounded-md bg-purple-700 hover:bg-purple-300 dark:bg-purple-300 hover:dark:bg-purple-700 "
+        className="text-center text-white px-2 items-center p-1 rounded-md bg-purple-700 hover:bg-purple-400 dark:bg-purple-400 hover:dark:bg-purple-700 "
         onClick={handleCopy}
       >
         {copied ? "Copied!" : "Copy"}
