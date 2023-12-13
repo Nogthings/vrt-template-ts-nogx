@@ -10,6 +10,7 @@ import Store from "./layouts/home/pages/store";
 import AdminLayout from "./layouts/admin";
 import Dashboard from "./layouts/admin/pages/dashboard";
 import Posts from "./layouts/admin/pages/posts";
+import NotFound from "./layouts/home/pages/404";
 
 const router = createBrowserRouter([
   {
@@ -27,8 +28,12 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Dashboard /> },
       { path: "posts", element: <Posts /> },
-    ]
-  }
+    ],
+  },
+  {
+    path: "*",
+    element: <NotFound />,
+  },
 ]);
 
 export default router;
