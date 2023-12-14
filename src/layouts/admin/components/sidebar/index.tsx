@@ -67,12 +67,14 @@ function Sidebar() {
           </li>
         </ul>
       </div>
-      <div className="p-2">
+      <div
+        className={`flex items-center p-2 ${
+          collapsed ? "justify-center" : "justify-end"
+        }`}
+      >
         <button
-          className={`flex items-center dark:text-white mb-4 hover:bg-purple-300 rounded-full aspect-square ${
-            collapsed
-              ? "flex justify-center text-xl p-1 rounded w-full"
-              : "flex justify-end text-xl p-1 rounded w-full"
+          className={`flex items-center dark:text-white mb-2 hover:bg-purple-300 rounded-full aspect-square ${
+            collapsed ? " text-xl p-1 rounded" : " text-xl p-1 rounded  mr-2"
           }`}
           onClick={handleToggleCollapse}
         >
