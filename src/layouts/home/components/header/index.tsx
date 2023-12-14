@@ -34,6 +34,9 @@ function Header() {
           <Link to="/blog">Blog</Link>
         </li>
         <li className="font-semibold text-gray-700 dark:text-gray-100 hover:text-purple-700 dark:hover:text-purple-300  ">
+          <Link to="/admin">Dashboard</Link>
+        </li>
+        <li className="font-semibold text-gray-700 dark:text-gray-100 hover:text-purple-700 dark:hover:text-purple-300  ">
           <button
             className={`${
               isDarkMode ? "text-gray-100" : "text-dark"
