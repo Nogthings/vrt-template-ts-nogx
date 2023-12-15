@@ -1,14 +1,18 @@
 import { Outlet } from "react-router-dom";
 import Sidebar from "./components/sidebar";
+import { ToggleMenuProvider } from "./providers/toggleMenu";
+import Box from "./components/box";
 
 function AdminLayout() {
   return (
-    <div className="bg-gray-200 dark:bg-gray-700">
-      <Sidebar />
-      <div className="p-10 sm:ml-64">
-        <Outlet />
+    <ToggleMenuProvider>
+      <div className="bg-gray-200 dark:bg-gray-700">
+        <Sidebar />
+        <Box>
+          <Outlet />
+        </Box>
       </div>
-    </div>
+    </ToggleMenuProvider>
   );
 }
 

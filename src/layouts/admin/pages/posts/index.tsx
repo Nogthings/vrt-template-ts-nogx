@@ -1,7 +1,6 @@
-
 function Posts() {
   return (
-    <div>
+    <div className="h-screen">
       <h1>Posts</h1>
     </div>
   );

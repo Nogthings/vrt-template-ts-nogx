@@ -10,7 +10,7 @@ import Store from "./layouts/home/pages/store";
 import AdminLayout from "./layouts/admin";
 import Dashboard from "./layouts/admin/pages/dashboard";
 import Posts from "./layouts/admin/pages/posts";
-import NotFound from "./layouts/home/pages/404";
+import NotFound from "./layouts/pages/404";
 
 const router = createBrowserRouter([
   {
