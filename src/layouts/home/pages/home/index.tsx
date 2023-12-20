@@ -1,11 +1,11 @@
-import Box from "../../../components/box";
+import Container from "../../../components/container";
 import Card from "../../../components/card";
 import Command from "../../../components/command";
 
 function Home() {
   return (
     <div className="h-screen">
-      <Box>
+      <Container>
         <main className="mx-auto text-center">
           <h1 className="text-gray-700 dark:text-gray-200 font-semibold text-lg text-center">
             Nogx Template
@@ -54,7 +54,7 @@ function Home() {
             React Icons es una libreria de iconos para React.
           </Card>
         </div>
-      </Box>
+      </Container>
     </div>
   );
 }

@@ -11,6 +11,7 @@ import AdminLayout from "./layouts/admin";
 import Dashboard from "./layouts/admin/pages/dashboard";
 import Posts from "./layouts/admin/pages/posts";
 import NotFound from "./layouts/pages/404";
+import CreatePost from "./layouts/admin/pages/posts/pages/create";
 
 const router = createBrowserRouter([
   {
@@ -27,7 +28,11 @@ const router = createBrowserRouter([
     element: <AdminLayout />,
     children: [
       { index: true, element: <Dashboard /> },
-      { path: "posts", element: <Posts /> },
+      {
+        path: "posts",
+        element: <Posts />,
+        children: [{ path: "create", element: <CreatePost /> }],
+      },
     ],
   },
   {

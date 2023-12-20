@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 import ToggleMenuContext from "../../providers/toggleMenu";
+import ToggleTheme from "../../../components/toggleTheme";
 
 // Icons
 import {
@@ -65,10 +66,11 @@ function Sidebar() {
         </ul>
       </div>
       <div
-        className={`flex items-center p-2 ${
+        className={`flex items-center gap-2 p-2 ${
           menuCollapsed ? "justify-center" : "justify-end"
         }`}
       >
+        <ToggleTheme />
         <button
           className={`flex items-center dark:text-white mb-2 hover:bg-purple-300 hover:text-white rounded-full aspect-square transition-all ease-in-out duration-300 ${
             menuCollapsed
