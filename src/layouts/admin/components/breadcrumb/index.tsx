@@ -20,30 +20,34 @@ function Breadcrumb() {
 
   return (
     <div aria-label="Breadcrumb">
-      {breadcrumbs.map((breadcrumb, index) => (
-        <ol className="flex items-center gap-1 text-sm text-gray-600 dark:text-gray-100">
-          <li key={breadcrumb.path}>
-            {breadcrumb.path === "/admin" ? (
-              <Link
-                to="/admin"
-                className="block transition hover:text-purple-700 dark:hover:text-purple-300"
-              >
-                <IoHomeOutline />
-              </Link>
-            ) : (
-              <Link
-                to={breadcrumb.path}
-                className="block transition hover:text-purple-700 dark:hover:text-purple-300"
-              >
-                {breadcrumb.name}
-              </Link>
+      <ol className="flex items-center gap-1 text-sm text-gray-600 dark:text-gray-100">
+        {breadcrumbs.map((breadcrumb, index) => (
+          <div className="flex items-center gap-1">
+            <li key={breadcrumb.path}>
+              {breadcrumb.path === "/admin" ? (
+                <Link
+                  to="/admin"
+                  className=" transition hover:text-purple-700 dark:hover:text-purple-300"
+                >
+                  <IoHomeOutline />
+                </Link>
+              ) : (
+                <Link
+                  to={breadcrumb.path}
+                  className=" transition hover:text-purple-700 dark:hover:text-purple-300"
+                >
+                  {breadcrumb.name}
+                </Link>
+              )}
+            </li>
+            {index < breadcrumbs.length - 1 && (
+              <li>
+                <IoChevronForwardOutline />
+              </li>
             )}
-          </li>
-          <li>
-            {index < breadcrumbs.length - 1 && <IoChevronForwardOutline />}
-          </li>
-        </ol>
-      ))}
+          </div>
+        ))}
+      </ol>
     </div>
   );
 }

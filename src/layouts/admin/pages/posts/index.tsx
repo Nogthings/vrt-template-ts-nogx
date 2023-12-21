@@ -1,7 +1,6 @@
 import Button from "../../../components/button";
 import { useNavigate } from "react-router-dom";
-import { Outlet } from "react-router-dom";
-import { IoLogoHtml5 } from "react-icons/io5";
+import { IoAddOutline } from "react-icons/io5";
 function Posts() {
   const navigate = useNavigate();
   const handleCreateClick = () => {
@@ -9,17 +8,12 @@ function Posts() {
   };
 
   return (
-    <div className="h-screen flex gap-2 py-4">
+    <div className="h-screen flex gap-2">
       <div>
         <h1>Posts</h1>
-        <Button
-          title="Create Post"
-          onClick={handleCreateClick}
-          icon={IoLogoHtml5}
-        />
-      </div>
-      <div>
-        <Outlet />
+        <Button title="Create Post" onClick={handleCreateClick}>
+          <IoAddOutline />
+        </Button>
       </div>
     </div>
   );

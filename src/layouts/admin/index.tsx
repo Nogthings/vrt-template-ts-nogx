@@ -11,7 +11,9 @@ function AdminLayout() {
         <Sidebar />
         <Box>
           <Breadcrumb />
-          <Outlet />
+          <div className="py-4">
+            <Outlet />
+          </div>
         </Box>
       </div>
     </ToggleMenuProvider>

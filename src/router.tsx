@@ -24,14 +24,17 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: "admin",
+    path: "/admin",
     element: <AdminLayout />,
     children: [
       { index: true, element: <Dashboard /> },
       {
         path: "posts",
         element: <Posts />,
-        children: [{ path: "create", element: <CreatePost /> }],
+      },
+      {
+        path: "posts/create",
+        element: <CreatePost />,
       },
     ],
   },
