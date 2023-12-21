@@ -23,7 +23,7 @@ function Breadcrumb() {
       <ol className="flex items-center gap-1 text-sm text-gray-600 dark:text-gray-100">
         {breadcrumbs.map((breadcrumb, index) => (
           <div className="flex items-center gap-1">
-            <li key={breadcrumb.path}>
+            <li key={breadcrumb.name}>
               {breadcrumb.path === "/admin" ? (
                 <Link
                   to="/admin"
@@ -41,7 +41,7 @@ function Breadcrumb() {
               )}
             </li>
             {index < breadcrumbs.length - 1 && (
-              <li>
+              <li key={index}>
                 <IoChevronForwardOutline />
               </li>
             )}

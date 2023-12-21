@@ -3,6 +3,7 @@ import Sidebar from "./components/sidebar";
 import { ToggleMenuProvider } from "./providers/toggleMenu";
 import Box from "./components/box";
 import Breadcrumb from "./components/breadcrumb";
+import SpeedDial from "../components/speedDial";
 
 function AdminLayout() {
   return (
@@ -14,6 +15,7 @@ function AdminLayout() {
           <div className="py-4">
             <Outlet />
           </div>
+          <SpeedDial />
         </Box>
       </div>
     </ToggleMenuProvider>
