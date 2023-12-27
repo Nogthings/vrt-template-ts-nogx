@@ -43,9 +43,10 @@ function Sidebar() {
           <li>
             <LinkButton
               to="/admin"
-              color="info"
+              color="error"
               title={menuCollapsed ? "" : "Dashboard"}
               iconOnly={menuCollapsed ? true : false}
+              variant="gradient"
             >
               <IoGridOutline />
             </LinkButton>
