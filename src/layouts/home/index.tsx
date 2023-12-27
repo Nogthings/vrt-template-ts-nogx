@@ -9,7 +9,7 @@ import Footer from "./components/footer";
 
 function HomeLayout() {
   return (
-    <div className="bg-gray-200 dark:bg-gray-700">
+    <div className="bg-dark-200 dark:bg-dark-700">
       <div className="px-4 max-w-4xl mx-auto">
         <Header />
         <div className=" px-4 py-10">

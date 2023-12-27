@@ -1,7 +1,6 @@
-import { Link } from "react-router-dom";
-
 import ToggleMenuContext from "../../providers/toggleMenu";
 import ToggleTheme from "../../../components/toggleTheme";
+import LinkButton from "../linkButton";
 
 // Icons
 import {
@@ -17,7 +16,7 @@ function Sidebar() {
 
   return (
     <aside
-      className={`fixed left-4 top-4 bottom-4 flex flex-col rounded-md shadow-md bg-gray-200 dark:bg-black ${
+      className={`fixed left-4 top-4 bottom-4 flex flex-col rounded-md shadow-md bg-dark-100 dark:bg-dark-800 ${
         menuCollapsed
           ? "w-16 transition-all ease-in-out duration-300"
           : "transition-all w-64 ease-in-out duration-300"
@@ -30,38 +29,35 @@ function Sidebar() {
       >
         <div>
           <h1
-            className={`text-2xl font-bold text-gray-800 dark:text-gray-100 ${
+            className={`text-2xl font-bold text-dark-800 dark:text-dark-100 ${
               menuCollapsed ? "text-center text-4xl" : ""
             }`}
           >
             {menuCollapsed ? "N" : "Nogx"}
           </h1>
-          <p className="text-gray-500 dark:text-gray-300">
+          <p className="text-dark-500 dark:text-dark-300">
             {menuCollapsed ? "" : "Admin Dashboard"}
           </p>
         </div>
         <ul className="space-y-2 mt-10">
           <li>
-            <Link
+            <LinkButton
               to="/admin"
-              className={`flex items-center justify-start gap-4 bg-purple-400 rounded-md p-2 text-white transition-all duration-100  ${
-                menuCollapsed ? "justify-center text-xl aspect-square" : ""
-              }`}
+              color="info"
+              title={menuCollapsed ? "" : "Dashboard"}
+              iconOnly={menuCollapsed ? true : false}
             >
               <IoGridOutline />
-              {menuCollapsed ? null : "Dashboard"}
-            </Link>
+            </LinkButton>
           </li>
           <li>
-            <Link
+            <LinkButton
               to="/admin/posts"
-              className={`flex items-center justify-start gap-4 bg-purple-400 rounded-md p-2 text-white transition-all duration-100  ${
-                menuCollapsed ? "justify-center text-xl aspect-square" : ""
-              }`}
+              title={menuCollapsed ? "" : "Posts"}
+              iconOnly={menuCollapsed ? true : false}
             >
               <IoBookOutline />
-              {menuCollapsed ? null : "Posts"}
-            </Link>
+            </LinkButton>
           </li>
         </ul>
       </div>
@@ -72,7 +68,7 @@ function Sidebar() {
       >
         <ToggleTheme />
         <button
-          className={`flex items-center dark:text-white mb-2 hover:bg-purple-300 hover:text-white rounded-full aspect-square transition-all ease-in-out duration-300 ${
+          className={`flex items-center dark:text-white mb-2 hover:bg-primary-300 hover:text-white rounded-full aspect-square transition-all ease-in-out duration-300 ${
             menuCollapsed
               ? " text-xl p-1 rounded"
               : " text-xl p-1 rounded  mr-2"

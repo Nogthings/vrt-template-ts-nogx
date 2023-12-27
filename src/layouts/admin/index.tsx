@@ -8,7 +8,7 @@ import SpeedDial from "../components/speedDial";
 function AdminLayout() {
   return (
     <ToggleMenuProvider>
-      <div className="bg-gray-200 dark:bg-gray-700">
+      <div className="bg-dark-50 dark:bg-dark-900">
         <Sidebar />
         <Box>
           <Breadcrumb />

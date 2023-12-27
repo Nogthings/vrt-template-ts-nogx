@@ -7,22 +7,22 @@ function Home() {
     <div className="h-screen">
       <Container>
         <main className="mx-auto text-center">
-          <h1 className="text-gray-700 dark:text-gray-200 font-semibold text-lg text-center">
+          <h1 className="text-dark-700 dark:text-dark-200 font-semibold text-lg text-center">
             Nogx Template
           </h1>
-          <p className="text-gray-500 dark:text-gray-400 text-center">
+          <p className="text-dark-500 dark:text-dark-400 text-center">
             Una plantilla Vite + React
           </p>
-          <p className="text-gray-700 dark:text-gray-200 mt-4">
+          <p className="text-dark-700 dark:text-dark-200 mt-4">
             ¡Bienvenido a Nogx - Una forma más rápida de comenzar con React,
             Vite, React Icons y Tailwind CSS!
           </p>
-          <p className="text-gray-700 dark:text-gray-200 mt-4">
+          <p className="text-dark-700 dark:text-dark-200 mt-4">
             Para comenzar, a usar esta platilla solo tiene que clonar el{" "}
             <a
               href="https://github.com/Nogthings/vrt-template-ts-nogx"
               target="_blank"
-              className="font-bold text-purple-700 dark:text-purple-300 hover:text-purple-300 dark:hover:text-purple-700"
+              className="font-bold text-primary-700 dark:text-primary-300 hover:text-primary-300 dark:hover:text-primary-700"
             >
               repositorio git
             </a>{" "}
@@ -38,7 +38,7 @@ function Home() {
           </div>
         </main>
 
-        <h2 className="mt-6 text-lg text-gray-700 dark:text-gray-100 font-semibold text-center">
+        <h2 className="mt-6 text-lg text-dark-700 dark:text-dark-100 font-semibold text-center">
           Conoce las tecnologias que usa esta plantilla
         </h2>
         <div className="flex justify-center items-center space-x-4 mt-2">

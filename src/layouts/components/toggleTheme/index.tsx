@@ -17,7 +17,7 @@ function ToggleTheme() {
   return (
     <button
       className={`${
-        isDarkMode ? "text-gray-100" : "text-dark"
+        isDarkMode ? "text-dark-100" : "text-dark"
       } flex items-center text-3xl`}
       onClick={toggleDarkMode}
     >

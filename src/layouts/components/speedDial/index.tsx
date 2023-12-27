@@ -26,7 +26,7 @@ function SpeedDial() {
           type="button"
           data-tooltip-target="tooltip-share"
           data-tooltip-placement="left"
-          className="flex justify-center items-center w-[52px] h-[52px] text-gray-500 hover:text-gray-900 bg-white rounded-full border border-gray-200 dark:border-gray-600 shadow-sm dark:hover:text-white dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400"
+          className="flex justify-center items-center w-[52px] h-[52px] text-dark-500 hover:text-dark-900 bg-white rounded-full border border-dark-200 dark:border-dark-600 shadow-sm dark:hover:text-white dark:text-dark-400 hover:bg-dark-50 dark:bg-dark-700 dark:hover:bg-dark-600 focus:ring-4 focus:ring-dark-300 focus:outline-none dark:focus:ring-dark-400"
         >
           <IoShareSocialOutline className="w-5 h-5" />
           <span className="sr-only">Share</span>
@@ -34,7 +34,7 @@ function SpeedDial() {
         <div
           id="tooltip-share"
           role="tooltip"
-          className="absolute z-10 invisible inline-block w-auto px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+          className="absolute z-10 invisible inline-block w-auto px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-dark-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-dark-700"
         >
           Share
           <div className="tooltip-arrow" data-popper-arrow></div>
@@ -43,7 +43,7 @@ function SpeedDial() {
           type="button"
           data-tooltip-target="tooltip-print"
           data-tooltip-placement="left"
-          className="flex justify-center items-center w-[52px] h-[52px] text-gray-500 hover:text-gray-900 bg-white rounded-full border border-gray-200 dark:border-gray-600 shadow-sm dark:hover:text-white dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400"
+          className="flex justify-center items-center w-[52px] h-[52px] text-dark-500 hover:text-dark-900 bg-white rounded-full border border-dark-200 dark:border-dark-600 shadow-sm dark:hover:text-white dark:text-dark-400 hover:bg-dark-50 dark:bg-dark-700 dark:hover:bg-dark-600 focus:ring-4 focus:ring-dark-300 focus:outline-none dark:focus:ring-dark-400"
         >
           <IoPrintOutline className="w-5 h-5" />
           <span className="sr-only">Print</span>
@@ -51,7 +51,7 @@ function SpeedDial() {
         <div
           id="tooltip-print"
           role="tooltip"
-          className="absolute z-10 invisible inline-block w-auto px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+          className="absolute z-10 invisible inline-block w-auto px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-dark-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-dark-700"
         >
           Print
           <div className="tooltip-arrow" data-popper-arrow></div>
@@ -60,7 +60,7 @@ function SpeedDial() {
           type="button"
           data-tooltip-target="tooltip-download"
           data-tooltip-placement="left"
-          className="flex justify-center items-center w-[52px] h-[52px] text-gray-500 hover:text-gray-900 bg-white rounded-full border border-gray-200 dark:border-gray-600 shadow-sm dark:hover:text-white dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400"
+          className="flex justify-center items-center w-[52px] h-[52px] text-dark-500 hover:text-dark-900 bg-white rounded-full border border-dark-200 dark:border-dark-600 shadow-sm dark:hover:text-white dark:text-dark-400 hover:bg-dark-50 dark:bg-dark-700 dark:hover:bg-dark-600 focus:ring-4 focus:ring-dark-300 focus:outline-none dark:focus:ring-dark-400"
         >
           <IoCloudDownloadOutline className="w-5 h-5" />
           <span className="sr-only">Download</span>
@@ -68,7 +68,7 @@ function SpeedDial() {
         <div
           id="tooltip-download"
           role="tooltip"
-          className="absolute z-10 invisible inline-block w-auto px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+          className="absolute z-10 invisible inline-block w-auto px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-dark-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-dark-700"
         >
           Download
           <div className="tooltip-arrow" data-popper-arrow></div>
@@ -77,7 +77,7 @@ function SpeedDial() {
           type="button"
           data-tooltip-target="tooltip-copy"
           data-tooltip-placement="left"
-          className="flex justify-center items-center w-[52px] h-[52px] text-gray-500 hover:text-gray-900 bg-white rounded-full border border-gray-200 dark:border-gray-600 dark:hover:text-white shadow-sm dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400"
+          className="flex justify-center items-center w-[52px] h-[52px] text-dark-500 hover:text-dark-900 bg-white rounded-full border border-dark-200 dark:border-dark-600 dark:hover:text-white shadow-sm dark:text-dark-400 hover:bg-dark-50 dark:bg-dark-700 dark:hover:bg-dark-600 focus:ring-4 focus:ring-dark-300 focus:outline-none dark:focus:ring-dark-400"
         >
           <IoCopyOutline className="w-5 h-5" />
           <span className="sr-only">Copy</span>
@@ -85,7 +85,7 @@ function SpeedDial() {
         <div
           id="tooltip-copy"
           role="tooltip"
-          className="absolute z-10 invisible inline-block w-auto px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+          className="absolute z-10 invisible inline-block w-auto px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-dark-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-dark-700"
         >
           Copy
           <div className="tooltip-arrow" data-popper-arrow></div>
@@ -97,7 +97,7 @@ function SpeedDial() {
         data-dial-toggle="speed-dial-menu-bottom-right"
         aria-controls="speed-dial-menu-bottom-right"
         aria-expanded="false"
-        className={`flex items-center justify-center text-white bg-purple-700 rounded-full w-14 h-14 hover:bg-purple-800 dark:bg-purple-600 dark:hover:bg-purple-700 focus:ring-4 focus:ring-purple-300 focus:outline-none dark:focus:ring-purple-800 transition-all duration-300 ${
+        className={`flex items-center justify-center text-white bg-primary-700 rounded-full w-14 h-14 hover:bg-primary-800 dark:bg-primary-600 dark:hover:bg-primary-700 focus:ring-4 focus:ring-primary-300 focus:outline-none dark:focus:ring-primary-800 transition-all duration-300 ${
           isDialOpen ? "rotate-45" : ""
         } `}
       >
