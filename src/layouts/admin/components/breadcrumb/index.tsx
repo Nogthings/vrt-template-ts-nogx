@@ -20,21 +20,21 @@ function Breadcrumb() {
 
   return (
     <div aria-label="Breadcrumb">
-      <ol className="flex items-center gap-1 text-sm text-gray-600 dark:text-gray-100">
+      <ol className="flex items-center gap-1 text-sm text-dark-600 dark:text-dark-100">
         {breadcrumbs.map((breadcrumb, index) => (
           <div className="flex items-center gap-1">
             <li key={breadcrumb.name}>
               {breadcrumb.path === "/admin" ? (
                 <Link
                   to="/admin"
-                  className=" transition hover:text-purple-700 dark:hover:text-purple-300"
+                  className=" transition hover:text-primary-700 dark:hover:text-primary-300"
                 >
                   <IoHomeOutline />
                 </Link>
               ) : (
                 <Link
                   to={breadcrumb.path}
-                  className=" transition hover:text-purple-700 dark:hover:text-purple-300"
+                  className=" transition hover:text-primary-700 dark:hover:text-primary-300"
                 >
                   {breadcrumb.name}
                 </Link>

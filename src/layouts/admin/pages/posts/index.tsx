@@ -15,9 +15,12 @@ function Posts() {
         <Button title="Create Post" onClick={handleCreateClick}>
           <IoAddOutline />
         </Button>
-        <IconButton rounded color="#c4544a">
+        <IconButton rounded color="#8e24aa">
           <IoAddOutline />
         </IconButton>
+        <Button title="Create" color="#741f89">
+          <IoAddOutline />
+        </Button>
       </div>
     </div>
   );

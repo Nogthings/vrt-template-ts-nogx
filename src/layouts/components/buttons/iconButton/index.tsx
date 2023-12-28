@@ -13,7 +13,7 @@ function IconButton({
         color ? ` bg-[${color}] ` : "bg-purple-400"
       } ${
         rounded ? "rounded-full" : ""
-      } transition-all duration-100 hover:bg-purple-300 p-2 text-white`}
+      } transition-all duration-100 hover:bg-primary-300 p-2 text-white`}
     >
       {children}
     </button>
