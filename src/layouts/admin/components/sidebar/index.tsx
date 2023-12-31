@@ -43,7 +43,6 @@ function Sidebar() {
           <li>
             <LinkButton
               to="/admin"
-              color="error"
               title={menuCollapsed ? "" : "Dashboard"}
               iconOnly={menuCollapsed ? true : false}
               variant="gradient"
