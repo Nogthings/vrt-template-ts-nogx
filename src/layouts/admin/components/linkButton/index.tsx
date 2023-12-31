@@ -33,7 +33,25 @@ function LinkButton({
 
   const getVariant = () => {
     if (variant === "outlined") {
-      return "border border-primary-500 text-gray-950 dark:text-gray-100 hover:bg-primary-500 hover:text-white bg-transparent focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 focus:bg-primary-500 focus:text-white transition-all duration-300";
+      if (color === "primary") {
+        return "border border-primary-500 text-gray-950 dark:text-gray-100 hover:bg-primary-500 hover:text-white bg-transparent focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 focus:bg-primary-500 focus:text-white transition-all duration-300";
+      } else if (color === "secondary") {
+        return "border border-secondary-500 text-gray-950 dark:text-gray-100 hover:bg-secondary-500 hover:text-white bg-transparent focus:ring-2 focus:ring-offset-2 focus:ring-secondary-500 focus:bg-secondary-500 focus:text-white transition-all duration-300";
+      } else if (color === "success") {
+        return "border border-success-500 text-gray-950 dark:text-gray-100 hover:bg-success-500 hover:text-white bg-transparent focus:ring-2 focus:ring-offset-2 focus:ring-success-500 focus:bg-success-500 focus:text-white transition-all duration-300";
+      } else if (color === "error") {
+        return "border border-error-500 text-gray-950 dark:text-gray-100 hover:bg-error-500 hover:text-white bg-transparent focus:ring-2 focus:ring-offset-2 focus:ring-error-500 focus:bg-error-500 focus:text-white transition-all duration-300";
+      } else if (color === "warning") {
+        return "border border-warning-500 text-gray-950 dark:text-gray-100 hover:bg-warning-500 hover:text-white bg-transparent focus:ring-2 focus:ring-offset-2 focus:ring-warning-500 focus:bg-warning-500 focus:text-white transition-all duration-300";
+      } else if (color === "info") {
+        return "border border-info-500 text-gray-950 dark:text-gray-100 hover:bg-info-500 hover:text-white bg-transparent focus:ring-2 focus:ring-offset-2 focus:ring-info-500 focus:bg-info-500 focus:text-white transition-all duration-300";
+      } else if (color === "dark") {
+        return "border border-dark-500 text-gray-950 dark:text-gray-100 hover:bg-dark-500 hover:text-white bg-transparent focus:ring-2 focus:ring-offset-2 focus:ring-dark-500 focus:bg-dark-500 focus:text-white transition-all duration-300";
+      } else if (color === "gray") {
+        return "border border-gray-500 text-gray-950 dark:text-gray-100 hover:bg-gray-500 hover:text-white bg-transparent focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 focus:bg-gray-500 focus:text-white transition-all duration-300";
+      } else {
+        return "border border-primary-500 text-gray-950 dark:text-gray-100 hover:bg-primary-500 hover:text-white bg-transparent focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 focus:bg-primary-500 focus:text-white transition-all duration-300";
+      }
     } else if (variant === "gradient") {
       if (color === "primary") {
         return "bg-gradient-to-r from-primary-700 via-primary-600 to-primary-500 hover:bg-gradient-to-tl hover:from-primary-700 hover:via-primary-600 hover:to-primary-500 transition-all duration-300 focus:ring-2 focus:ring-offset-2 focus:ring-primary-500";

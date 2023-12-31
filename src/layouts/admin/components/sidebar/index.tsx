@@ -19,7 +19,7 @@ function Sidebar() {
       className={`fixed left-4 top-4 bottom-4 flex flex-col rounded-md shadow-md bg-dark-100 dark:bg-dark-800 ${
         menuCollapsed
           ? "w-16 transition-all ease-in-out duration-300"
-          : "transition-all w-64 ease-in-out duration-300"
+          : "w-64 transition-all ease-in-out duration-300"
       }`}
     >
       <div
@@ -122,7 +122,7 @@ function Sidebar() {
               to="/admin"
               title={menuCollapsed ? "" : "Dashboard"}
               iconOnly={menuCollapsed ? true : false}
-              variant="outlined"
+              variant="outline"
               color="gray"
             >
               <IoGridOutline />
