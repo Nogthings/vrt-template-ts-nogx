@@ -46,6 +46,7 @@ function Sidebar() {
               title={menuCollapsed ? "" : "Dashboard"}
               iconOnly={menuCollapsed ? true : false}
               variant="gradient"
+              color="primary"
             >
               <IoGridOutline />
             </LinkButton>
@@ -55,8 +56,76 @@ function Sidebar() {
               to="/admin/posts"
               title={menuCollapsed ? "" : "Posts"}
               iconOnly={menuCollapsed ? true : false}
+              variant="gradient"
+              color="secondary"
             >
               <IoBookOutline />
+            </LinkButton>
+          </li>
+          <li>
+            <LinkButton
+              to="/admin"
+              title={menuCollapsed ? "" : "Dashboard"}
+              iconOnly={menuCollapsed ? true : false}
+              variant="gradient"
+              color="success"
+            >
+              <IoGridOutline />
+            </LinkButton>
+          </li>
+          <li>
+            <LinkButton
+              to="/admin"
+              title={menuCollapsed ? "" : "Dashboard"}
+              iconOnly={menuCollapsed ? true : false}
+              variant="gradient"
+              color="error"
+            >
+              <IoGridOutline />
+            </LinkButton>
+          </li>
+          <li>
+            <LinkButton
+              to="/admin"
+              title={menuCollapsed ? "" : "Dashboard"}
+              iconOnly={menuCollapsed ? true : false}
+              variant="gradient"
+              color="warning"
+            >
+              <IoGridOutline />
+            </LinkButton>
+          </li>
+          <li>
+            <LinkButton
+              to="/admin"
+              title={menuCollapsed ? "" : "Dashboard"}
+              iconOnly={menuCollapsed ? true : false}
+              variant="gradient"
+              color="info"
+            >
+              <IoGridOutline />
+            </LinkButton>
+          </li>
+          <li>
+            <LinkButton
+              to="/admin"
+              title={menuCollapsed ? "" : "Dashboard"}
+              iconOnly={menuCollapsed ? true : false}
+              variant="gradient"
+              color="dark"
+            >
+              <IoGridOutline />
+            </LinkButton>
+          </li>
+          <li>
+            <LinkButton
+              to="/admin"
+              title={menuCollapsed ? "" : "Dashboard"}
+              iconOnly={menuCollapsed ? true : false}
+              variant="outlined"
+              color="gray"
+            >
+              <IoGridOutline />
             </LinkButton>
           </li>
         </ul>
