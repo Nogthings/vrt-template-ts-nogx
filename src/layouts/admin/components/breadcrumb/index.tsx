@@ -1,3 +1,6 @@
+/**
+ * Made with ❤ by Nogx
+ */
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { IoChevronForwardOutline, IoHomeOutline } from "react-icons/io5";

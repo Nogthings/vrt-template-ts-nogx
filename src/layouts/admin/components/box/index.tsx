@@ -1,3 +1,6 @@
+/**
+ * Made with ❤ by Nogx
+ */
 import BoxProps from "./types";
 import useToggleMenu from "../../hooks/useToggleMenu";
 

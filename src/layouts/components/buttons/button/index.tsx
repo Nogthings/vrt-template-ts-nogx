@@ -1,3 +1,6 @@
+/**
+ * Made with ❤ by Nogx
+ */
 import ButtonProps from "./types";
 
 function Button({

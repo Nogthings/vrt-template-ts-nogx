@@ -1,5 +1,5 @@
 /**
- * nogx base layout
+ * Made with ❤ by Nogx
  */
 import { Link } from "react-router-dom";
 import ToggleTheme from "../../../components/toggleTheme";

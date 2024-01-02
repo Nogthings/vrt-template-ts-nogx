@@ -1,3 +1,6 @@
+/**
+ * Made with ❤ by Nogx
+ */
 import ToggleMenuContext from "../../providers/toggleMenu";
 import ToggleTheme from "../../../components/toggleTheme";
 import LinkButton from "../../../components/buttons/linkButton";
