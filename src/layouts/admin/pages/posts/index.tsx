@@ -1,24 +1,18 @@
 import Button from "../../../components/buttons/button";
-import { useNavigate } from "react-router-dom";
+import LinkButton from "../../../components/buttons/linkButton";
 import { IoAddOutline } from "react-icons/io5";
-import IconButton from "../../../components/buttons/iconButton";
 function Posts() {
-  const navigate = useNavigate();
-  const handleCreateClick = () => {
-    navigate("/admin/posts/create");
-  };
-
   return (
     <div className="h-screen flex gap-2">
       <div className="space-y-2">
-        <h1>Posts</h1>
-        <Button title="Create Post" onClick={handleCreateClick}>
+        <h1 className="text-gray-800 dark:text-gray-100">Posts</h1>
+        <LinkButton
+          title="Create Post"
+          to={"/admin/posts/create/admin/posts/create"}
+        >
           <IoAddOutline />
-        </Button>
-        <IconButton rounded color="#8e24aa">
-          <IoAddOutline />
-        </IconButton>
-        <Button title="Create" color="#741f89">
+        </LinkButton>
+        <Button title="Create" color="error" iconOnly rounded>
           <IoAddOutline />
         </Button>
       </div>

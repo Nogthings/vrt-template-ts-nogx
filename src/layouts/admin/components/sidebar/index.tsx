@@ -1,6 +1,6 @@
 import ToggleMenuContext from "../../providers/toggleMenu";
 import ToggleTheme from "../../../components/toggleTheme";
-import LinkButton from "../linkButton";
+import LinkButton from "../../../components/buttons/linkButton";
 
 // Icons
 import {
@@ -113,17 +113,6 @@ function Sidebar() {
               iconOnly={menuCollapsed ? true : false}
               variant="gradient"
               color="dark"
-            >
-              <IoGridOutline />
-            </LinkButton>
-          </li>
-          <li>
-            <LinkButton
-              to="/admin"
-              title={menuCollapsed ? "" : "Dashboard"}
-              iconOnly={menuCollapsed ? true : false}
-              variant="outline"
-              color="gray"
             >
               <IoGridOutline />
             </LinkButton>
