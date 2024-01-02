@@ -7,6 +7,7 @@ interface LinkProps {
   variant?: string;
   to: string;
   iconOnly?: boolean;
+  rounded?: boolean;
   style?: React.CSSProperties;
 }
 

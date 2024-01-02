@@ -8,74 +8,37 @@ function LinkButton({
   iconOnly,
   color,
   variant,
+  rounded,
   style,
 }: Readonly<LinkProps>) {
   const getColorClass = () => {
-    if (color === "primary") {
-      return "bg-primary-500 hover:bg-primary-700";
-    } else if (color === "secondary") {
-      return "bg-secondary-500 hover:bg-secondary-700";
-    } else if (color === "success") {
-      return "bg-success-500 hover:bg-success-700";
-    } else if (color === "error") {
-      return "bg-error-500 hover:bg-error-700";
-    } else if (color === "warning") {
-      return "bg-warning-500 hover:bg-warning-700";
-    } else if (color === "info") {
-      return "bg-info-500 hover:bg-info-700";
-    } else if (color === "light") {
-      return "bg-light-500 hover:bg-light-700";
-    } else if (color === "dark") {
-      return "bg-dark-500 hover:bg-dark-700";
-    } else {
-      return "bg-primary-500 hover:bg-primary-700";
-    }
+    const colorClasses = {
+      primary: "bg-primary-500 hover:bg-primary-700",
+      secondary: "bg-secondary-500 hover:bg-secondary-700",
+      success: "bg-success-500 hover:bg-success-700",
+      error: "bg-error-500 hover:bg-error-700",
+      warning: "bg-warning-500 hover:bg-warning-700",
+      info: "bg-info-500 hover:bg-info-700",
+      light: "bg-light-500 hover:bg-light-700",
+      dark: "bg-dark-500 hover:bg-dark-700",
+      gray: "bg-gray-500 hover:bg-gray-700",
+    };
+    return (
+      colorClasses[color as keyof typeof colorClasses] || colorClasses.primary
+    );
   };
 
   const getVariant = () => {
-    if (variant === "outlined") {
-      if (color === "primary") {
-        return "border-2 border-primary-500 text-gray-950 dark:text-gray-100 hover:bg-primary-500 hover:text-white bg-transparent focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 focus:bg-primary-500 focus:text-white transition-all duration-300";
-      } else if (color === "secondary") {
-        return "border-2 border-secondary-500 text-gray-950 dark:text-gray-100 hover:bg-secondary-500 hover:text-white bg-transparent focus:ring-2 focus:ring-offset-2 focus:ring-secondary-500 focus:bg-secondary-500 focus:text-white transition-all duration-300";
-      } else if (color === "success") {
-        return "border-2 border-success-500 text-gray-950 dark:text-gray-100 hover:bg-success-500 hover:text-white bg-transparent focus:ring-2 focus:ring-offset-2 focus:ring-success-500 focus:bg-success-500 focus:text-white transition-all duration-300";
-      } else if (color === "error") {
-        return "border-2 border-error-500 text-gray-950 dark:text-gray-100 hover:bg-error-500 hover:text-white bg-transparent focus:ring-2 focus:ring-offset-2 focus:ring-error-500 focus:bg-error-500 focus:text-white transition-all duration-300";
-      } else if (color === "warning") {
-        return "border-2 border-warning-500 text-gray-950 dark:text-gray-100 hover:bg-warning-500 hover:text-white bg-transparent focus:ring-2 focus:ring-offset-2 focus:ring-warning-500 focus:bg-warning-500 focus:text-white transition-all duration-300";
-      } else if (color === "info") {
-        return "border-2 border-info-500 text-gray-950 dark:text-gray-100 hover:bg-info-500 hover:text-white bg-transparent focus:ring-2 focus:ring-offset-2 focus:ring-info-500 focus:bg-info-500 focus:text-white transition-all duration-300";
-      } else if (color === "dark") {
-        return "border-2 border-dark-500 text-gray-950 dark:text-gray-100 hover:bg-dark-500 hover:text-white bg-transparent focus:ring-2 focus:ring-offset-2 focus:ring-dark-500 focus:bg-dark-500 focus:text-white transition-all duration-300";
-      } else if (color === "gray") {
-        return "border-2 border-gray-500 text-gray-950 dark:text-gray-100 hover:bg-gray-500 hover:text-white bg-transparent focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 focus:bg-gray-500 focus:text-white transition-all duration-300";
-      } else {
-        return "border-2 border-primary-500 text-gray-950 dark:text-gray-100 hover:bg-primary-500 hover:text-white bg-transparent focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 focus:bg-primary-500 focus:text-white transition-all duration-300";
-      }
-    } else if (variant === "gradient") {
-      if (color === "primary") {
-        return "bg-gradient-to-r from-primary-700 via-primary-600 to-primary-500 hover:bg-gradient-to-tl hover:from-primary-700 hover:via-primary-600 hover:to-primary-500 transition-all duration-300 focus:ring-2 focus:ring-offset-2 focus:ring-primary-500";
-      } else if (color === "secondary") {
-        return "bg-gradient-to-r from-secondary-700 via-secondary-600 to-secondary-500 hover:bg-gradient-to-tl hover:from-secondary-700 hover:via-secondary-600 hover:to-secondary-500 transition-all duration-300 focus:ring-2 focus:ring-offset-2 focus:ring-secondary-500";
-      } else if (color === "success") {
-        return "bg-gradient-to-r from-success-700 via-success-600 to-success-500 hover:bg-gradient-to-tl hover:from-success-700 hover:via-success-600 hover:to-success-500 transition-all duration-300 focus:ring-2 focus:ring-offset-2 focus:ring-success-500";
-      } else if (color === "error") {
-        return "bg-gradient-to-br from-error-700 via-error-600 to-error-500 hover:bg-gradient-to-tl hover:from-error-700 hover-from-error-600 hover:to-error-500 transition-all duration-300 focus:ring-2 focus:ring-offset-2 focus:ring-error-500";
-      } else if (color === "warning") {
-        return "bg-gradient-to-br from-warning-700 via-warning-600 to-warning-500 hover:bg-gradient-to-tl hover:from-warning-700 hover-from-warning-600 hover:to-warning-500 transition-all duration-300 focus:ring-2 focus:ring-offset-2 focus:ring-warning-500";
-      } else if (color === "info") {
-        return "bg-gradient-to-br from-info-700 via-info-600 to-info-500 hover:bg-gradient-to-tl hover:from-info-700 hover-from-info-600 hover:to-info-500 transition-all duration-300 focus:ring-2 focus:ring-offset-2 focus:ring-info-500";
-      } else if (color === "dark") {
-        return "bg-gradient-to-br from-dark-700 via-dark-600 to-dark-500 hover:bg-gradient-to-tl hover:from-dark-700 hover-from-dark-600 hover:to-dark-500 transition-all duration-300 focus:ring-2 focus:ring-offset-2 focus:ring-dark-500";
-      } else if (color === "gray") {
-        return "bg-gradient-to-br from-gray-700 via-gray-600 to-gray-500 hover:bg-gradient-to-tl hover:from-gray-700 hover-from-gray-600 hover:to-gray-500 transition-all duration-300 focus:ring-2 focus:ring-offset-2 focus:ring-gray-500";
-      } else {
-        return "bg-gradient-to-r from-primary-700 via-primary-600 to-primary-500 hover:bg-gradient-to-tl hover:from-primary-700 hover:via-primary-600 hover:to-primary-500 transition-all duration-300 focus:ring-2 focus:ring-offset-2 focus:ring-primary-500";
-      }
-    } else {
-      return "bg-primary-500 hover:bg-primary-700";
-    }
+    const variantClasses = {
+      solid: `bg-${color}-500 hover:bg-${color}-700 transition-all duration-300`,
+      outlined: `border-2 border-${color}-500 text-gray-950 dark:text-gray-100 hover:bg-${color}-500 hover:text-white bg-transparent focus:ring-2 focus:ring-offset-2 focus:ring-${color}-500 focus:bg-${color}-500 focus:text-white transition-all duration-300`,
+      gradient: `bg-gradient-to-r from-${color}-700 via-${color}-600 to-${color}-500 hover:bg-gradient-to-tl hover:from-${color}-700 hover:via-${color}-600 hover:to-${color}-500 transition-all duration-300 focus:ring-2 focus:ring-offset-2 focus:ring-${color}-500`,
+    };
+
+    return (
+      variantClasses[variant as keyof typeof variantClasses] ||
+      variantClasses.solid
+    );
   };
 
   return (
@@ -84,10 +47,12 @@ function LinkButton({
       style={style}
       className={`${children ? "gap-2" : " "} ${
         iconOnly ? "justify-center text-xl aspect-square" : ""
-      } ${getColorClass()} ${getVariant()} rounded-md py-2 pr-4 px-3 text-white flex items-center transition-all duration-150 hover:bg-primary-700`}
+      } ${
+        rounded ? "rounded-full p-2" : "rounded-md px-3 py-2"
+      } ${getColorClass()} ${getVariant()} text-white flex items-center transition-all duration-150 hover:bg-primary-700`}
     >
       <span>{children}</span>
-      {title}
+      <span className={`${iconOnly ? "hidden pr-2" : "pr-4"}`}>{title}</span>
     </Link>
   );
 }

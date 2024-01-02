@@ -8,11 +8,19 @@ function Posts() {
         <h1 className="text-gray-800 dark:text-gray-100">Posts</h1>
         <LinkButton
           title="Create Post"
-          to={"/admin/posts/create/admin/posts/create"}
+          color="primary"
+          variant="gradient"
+          to={"create"}
         >
           <IoAddOutline />
         </LinkButton>
-        <Button title="Create" color="error" iconOnly rounded>
+        <Button
+          title="Create"
+          color="error"
+          variant="gradient"
+          iconOnly
+          rounded
+        >
           <IoAddOutline />
         </Button>
       </div>
