@@ -25,7 +25,7 @@ function Breadcrumb() {
     <div aria-label="Breadcrumb">
       <ol className="flex items-center gap-1 text-sm text-dark-600 dark:text-dark-100">
         {breadcrumbs.map((breadcrumb, index) => (
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1" key={index}>
             <li key={breadcrumb.name}>
               {breadcrumb.path === "/admin" ? (
                 <Link
@@ -44,7 +44,7 @@ function Breadcrumb() {
               )}
             </li>
             {index < breadcrumbs.length - 1 && (
-              <li key={index}>
+              <li key={`chevron-${index}`}>
                 <IoChevronForwardOutline />
               </li>
             )}
