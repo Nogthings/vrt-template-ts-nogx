@@ -5,7 +5,7 @@ interface MenuItemProps {
   title: string;
   color?: string;
   variant?: string;
-  iconOnly?: string;
+  iconOnly?: boolean;
   style?: React.CSSProperties;
   to: string;
 }

@@ -32,8 +32,9 @@ function Button({
 
   const getVariant = () => {
     const variantClasses = {
-      solid: `bg-${color}-500 hover:bg-${color}-700 transition-all duration-300`,
-      outlined: `border-2 border-${color}-500 text-gray-950 dark:text-gray-100 hover:bg-${color}-500 hover:text-white bg-transparent focus:ring-2 focus:ring-offset-2 focus:ring-${color}-500 focus:bg-${color}-500 focus:text-white transition-all duration-300`,
+      transparent: `bg-transparent hover:bg-${color}-700 focus:ring-2 focus:ring-offset-2 focus:ring-${color}-500 focus:bg-${color}-500 focus:text-white`,
+      solid: `bg-${color}-500 hover:bg-${color}-700 focus:ring-2 focus:ring-offset-2 focus:ring-${color}-500 focus:bg-${color}-500 focus:text-white`,
+      outlined: `border-2 border-${color}-500 text-gray-950 dark:text-gray-100 hover:bg-${color}-500 hover:text-white bg-transparent focus:ring-2 focus:ring-offset-2 focus:ring-${color}-500 focus:bg-${color}-500 focus:text-white`,
       gradient: `bg-gradient-to-r from-${color}-700 via-${color}-600 to-${color}-500 hover:bg-gradient-to-tl hover:from-${color}-700 hover:via-${color}-600 hover:to-${color}-500 transition-all duration-300 focus:ring-2 focus:ring-offset-2 focus:ring-${color}-500`,
     };
 
@@ -51,7 +52,7 @@ function Button({
         iconOnly ? "justify-center text-xl aspect-square" : ""
       } ${
         rounded ? "rounded-full p-2" : "rounded-md px-3 py-2"
-      } ${getColorClass()} ${getVariant()} text-white flex items-center transition-all duration-150`}
+      } ${getColorClass()} ${getVariant()} text-white flex items-center transition-all ease-in-out duration-150`}
     >
       <span>{children}</span>
       <span className={`${iconOnly ? "hidden pr-2" : " pr-4"}`}>{title}</span>

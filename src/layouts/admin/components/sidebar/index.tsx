@@ -3,7 +3,7 @@
  */
 import ToggleMenuContext from "../../providers/toggleMenu";
 import ToggleTheme from "../../../components/toggleTheme";
-import LinkButton from "../../../components/buttons/linkButton";
+import MenuItem from "./components/menuItem";
 import {
   IoArrowBack,
   IoBookOutline,
@@ -50,18 +50,17 @@ function Sidebar() {
             <p className="text-dark-500 dark:text-dark-300">Admin Dashboard</p>
           )}
         </div>
-        <ul className="mt-10">
+        <ul className="mt-10 space-y-1">
           {links.map((link, index) => (
             <li key={index}>
-              <LinkButton
+              <MenuItem
                 to={link.to}
                 title={menuCollapsed ? "" : link.title}
                 iconOnly={menuCollapsed}
-                variant="gradient"
                 color={link.color}
               >
                 {link.icon}
-              </LinkButton>
+              </MenuItem>
             </li>
           ))}
         </ul>
