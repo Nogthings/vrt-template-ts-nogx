@@ -1,18 +1,18 @@
 /**
  * Made with ❤ by Nogx
  */
-import ButtonProps from "./types";
+import { Link } from "react-router-dom";
+import MenuItemProps from "./types";
 
-function Button({
-  title,
+function MenuItem({
+  to,
   children,
-  onClick,
+  title,
+  style,
   color,
   variant,
-  style,
   iconOnly,
-  rounded,
-}: Readonly<ButtonProps>) {
+}: Readonly<MenuItemProps>) {
   const getColorClass = () => {
     const colorClasses = {
       primary: "bg-primary-500 hover:bg-primary-700",
@@ -36,7 +36,6 @@ function Button({
       outlined: `border-2 border-${color}-500 text-gray-950 dark:text-gray-100 hover:bg-${color}-500 hover:text-white bg-transparent focus:ring-2 focus:ring-offset-2 focus:ring-${color}-500 focus:bg-${color}-500 focus:text-white transition-all duration-300`,
       gradient: `bg-gradient-to-r from-${color}-700 via-${color}-600 to-${color}-500 hover:bg-gradient-to-tl hover:from-${color}-700 hover:via-${color}-600 hover:to-${color}-500 transition-all duration-300 focus:ring-2 focus:ring-offset-2 focus:ring-${color}-500`,
     };
-
     return (
       variantClasses[variant as keyof typeof variantClasses] ||
       variantClasses.solid
@@ -44,19 +43,17 @@ function Button({
   };
 
   return (
-    <button
-      onClick={onClick}
-      style={style}
-      className={`${children ? "gap-2" : " "} ${
+    <Link
+      className={`${children ? "gap-2" : ""} ${
         iconOnly ? "justify-center text-xl aspect-square" : ""
-      } ${
-        rounded ? "rounded-full p-2" : "rounded-md px-3 py-2"
       } ${getColorClass()} ${getVariant()} text-white flex items-center transition-all duration-150`}
+      style={style}
+      to={to}
     >
       <span>{children}</span>
-      <span className={`${iconOnly ? "hidden pr-2" : " pr-4"}`}>{title}</span>
-    </button>
+      <span className={`${iconOnly ? "hidden pr-2" : "pr-4"}`}>{title}</span>
+    </Link>
   );
 }
 
-export default Button;
+export default MenuItem;

@@ -4,8 +4,6 @@
 import ToggleMenuContext from "../../providers/toggleMenu";
 import ToggleTheme from "../../../components/toggleTheme";
 import LinkButton from "../../../components/buttons/linkButton";
-
-// Icons
 import {
   IoArrowBack,
   IoBookOutline,
@@ -17,19 +15,29 @@ import { useContext } from "react";
 function Sidebar() {
   const { handleMenuToggle, menuCollapsed } = useContext(ToggleMenuContext);
 
+  const links = [
+    {
+      to: "/admin",
+      title: "Dashboard",
+      color: "primary",
+      icon: <IoGridOutline />,
+    },
+    {
+      to: "/admin/posts",
+      title: "Posts",
+      color: "primary",
+      icon: <IoBookOutline />,
+    },
+    // Agrega más enlaces según sea necesario
+  ];
+
   return (
     <aside
       className={`fixed left-4 top-4 bottom-4 flex flex-col rounded-md shadow-md bg-dark-100 dark:bg-dark-800 ${
-        menuCollapsed
-          ? "w-16 transition-all ease-in-out duration-300"
-          : "w-64 transition-all ease-in-out duration-300"
-      }`}
+        menuCollapsed ? "w-16" : "w-64"
+      } transition-all ease-in-out duration-300`}
     >
-      <div
-        className={`${
-          menuCollapsed ? "flex-grow px-2 py-10" : "flex-grow px-6 py-10"
-        }`}
-      >
+      <div className={`flex-grow px-${menuCollapsed ? 2 : 6} py-10`}>
         <div>
           <h1
             className={`text-2xl font-bold text-dark-800 dark:text-dark-100 ${
@@ -38,88 +46,24 @@ function Sidebar() {
           >
             {menuCollapsed ? "N" : "Nogx"}
           </h1>
-          <p className="text-dark-500 dark:text-dark-300">
-            {menuCollapsed ? "" : "Admin Dashboard"}
-          </p>
+          {!menuCollapsed && (
+            <p className="text-dark-500 dark:text-dark-300">Admin Dashboard</p>
+          )}
         </div>
-        <ul className="space-y-2 mt-10">
-          <li>
-            <LinkButton
-              to="/admin"
-              title={menuCollapsed ? "" : "Dashboard"}
-              iconOnly={menuCollapsed ? true : false}
-              variant="gradient"
-              color="primary"
-            >
-              <IoGridOutline />
-            </LinkButton>
-          </li>
-          <li>
-            <LinkButton
-              to="/admin/posts"
-              title={menuCollapsed ? "" : "Posts"}
-              iconOnly={menuCollapsed ? true : false}
-              variant="gradient"
-              color="secondary"
-            >
-              <IoBookOutline />
-            </LinkButton>
-          </li>
-          <li>
-            <LinkButton
-              to="/admin"
-              title={menuCollapsed ? "" : "Dashboard"}
-              iconOnly={menuCollapsed ? true : false}
-              variant="gradient"
-              color="success"
-            >
-              <IoGridOutline />
-            </LinkButton>
-          </li>
-          <li>
-            <LinkButton
-              to="/admin"
-              title={menuCollapsed ? "" : "Dashboard"}
-              iconOnly={menuCollapsed ? true : false}
-              variant="gradient"
-              color="error"
-            >
-              <IoGridOutline />
-            </LinkButton>
-          </li>
-          <li>
-            <LinkButton
-              to="/admin"
-              title={menuCollapsed ? "" : "Dashboard"}
-              iconOnly={menuCollapsed ? true : false}
-              variant="gradient"
-              color="warning"
-            >
-              <IoGridOutline />
-            </LinkButton>
-          </li>
-          <li>
-            <LinkButton
-              to="/admin"
-              title={menuCollapsed ? "" : "Dashboard"}
-              iconOnly={menuCollapsed ? true : false}
-              variant="gradient"
-              color="info"
-            >
-              <IoGridOutline />
-            </LinkButton>
-          </li>
-          <li>
-            <LinkButton
-              to="/admin"
-              title={menuCollapsed ? "" : "Dashboard"}
-              iconOnly={menuCollapsed ? true : false}
-              variant="gradient"
-              color="dark"
-            >
-              <IoGridOutline />
-            </LinkButton>
-          </li>
+        <ul className="mt-10">
+          {links.map((link, index) => (
+            <li key={index}>
+              <LinkButton
+                to={link.to}
+                title={menuCollapsed ? "" : link.title}
+                iconOnly={menuCollapsed}
+                variant="gradient"
+                color={link.color}
+              >
+                {link.icon}
+              </LinkButton>
+            </li>
+          ))}
         </ul>
       </div>
       <div
@@ -129,10 +73,8 @@ function Sidebar() {
       >
         <ToggleTheme />
         <button
-          className={`flex items-center dark:text-white mb-2 hover:bg-primary-300 hover:text-white rounded-full aspect-square transition-all ease-in-out duration-300 ${
-            menuCollapsed
-              ? " text-xl p-1 rounded"
-              : " text-xl p-1 rounded  mr-2"
+          className={`flex items-center dark:text-white mb-2 hover:bg-primary-300 hover:text-white rounded-full aspect-square transition-all ease-in-out duration-300 text-xl p-1 rounded${
+            menuCollapsed ? " rounded mr-2" : ""
           }`}
           onClick={() => handleMenuToggle(!menuCollapsed)}
         >
