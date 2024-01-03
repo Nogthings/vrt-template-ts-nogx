@@ -1,7 +1,7 @@
 /**
  * Made with ❤ by Nogx
  */
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import MenuItemProps from "./types";
 
 function MenuItem({
@@ -44,16 +44,16 @@ function MenuItem({
   };
 
   return (
-    <Link
+    <NavLink
       className={`${children ? "gap-2" : ""} ${
         iconOnly ? "justify-center text-xl aspect-square" : ""
-      } ${getColorClass()} ${getVariant()} text-gray-800 dark:text-white flex items-center transition-all ease-in-out duration-150 py-3 px-4 rounded-md`}
+      } ${getColorClass()} ${getVariant()} text-gray-800 dark:text-white flex items-center transition-all ease-in-out duration-150 py-3 px-4 rounded-md active:bg-${color}-700`}
       style={style}
       to={to}
     >
       <span>{children}</span>
       <span className={`${iconOnly ? "hidden pr-2" : "pr-4"}`}>{title}</span>
-    </Link>
+    </NavLink>
   );
 }
 
