@@ -23,7 +23,7 @@ function Breadcrumb() {
 
   return (
     <div aria-label="Breadcrumb">
-      <ol className="flex items-center gap-1 text-sm text-dark-600 dark:text-dark-100">
+      <ol className="flex items-center gap-1 text-sm text-dark-600 dark:text-dark-100 h-6">
         {breadcrumbs.map((breadcrumb, index) => (
           <div className="flex items-center gap-1" key={breadcrumb.name}>
             <li key={breadcrumb.name}>

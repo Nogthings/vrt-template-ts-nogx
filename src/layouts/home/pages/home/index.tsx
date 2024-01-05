@@ -5,7 +5,7 @@ import Command from "../../../components/command";
 function Home() {
   return (
     <div className="h-screen">
-      <Container>
+      <Container padding="10">
         <main className="mx-auto text-center">
           <h1 className="text-dark-700 dark:text-dark-200 font-semibold text-lg text-center">
             Nogx Template

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import LinkProps from "./types";
 
 function LinkButton({
@@ -11,6 +11,9 @@ function LinkButton({
   rounded,
   style,
 }: Readonly<LinkProps>) {
+  const location = useLocation();
+  const isActive = location.pathname === to;
+  console.log(location.pathname);
   const getColorClass = () => {
     const colorClasses = {
       primary: "bg-primary-500 hover:bg-primary-700",
@@ -45,11 +48,13 @@ function LinkButton({
     <Link
       to={to}
       style={style}
-      className={`${children ? "gap-2" : " "} ${
+      className={`${children ? "gap-2" : ""} ${
         iconOnly ? "justify-center text-xl aspect-square" : ""
       } ${
         rounded ? "rounded-full p-2" : "rounded-md px-3 py-2"
-      } ${getColorClass()} ${getVariant()} text-white flex items-center transition-all ease-in-out duration-300 hover:bg-primary-700`}
+      } ${getColorClass()} ${getVariant()} text-white flex items-center transition-all ease-in-out duration-300 hover:bg-primary-700 ${
+        isActive ? `bg-${color}-700` : ""
+      }`}
     >
       <span>{children}</span>
       <span className={`${iconOnly ? "hidden pr-2" : "pr-4"}`}>{title}</span>

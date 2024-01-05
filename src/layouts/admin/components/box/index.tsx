@@ -4,11 +4,14 @@
 import BoxProps from "./types";
 import useToggleMenu from "../../hooks/useToggleMenu";
 
-function Box({ children }: Readonly<BoxProps>) {
+function Box({ children, style }: Readonly<BoxProps>) {
   const { menuCollapsed } = useToggleMenu();
 
   return (
-    <div className={`p-10 ${menuCollapsed ? "sm:ml-16" : "sm:ml-64"}`}>
+    <div
+      className={`p-10 ${menuCollapsed ? "sm:ml-16" : "sm:ml-[17rem]"}`}
+      style={style}
+    >
       {children}
     </div>
   );

@@ -1,6 +1,3 @@
-/**
- * Made with ❤ by Nogx
- */
 import { NavLink } from "react-router-dom";
 import MenuItemProps from "./types";
 
@@ -32,10 +29,10 @@ function MenuItem({
 
   const getVariant = () => {
     const variantClasses = {
-      transparent: `bg-transparent hover:bg-${color}-700 focus:ring-2 focus:ring-offset-2 focus:ring-${color}-500 focus:bg-${color}-500 focus:text-white hover:text-white`,
-      solid: `bg-${color}-500 hover:bg-${color}-700`,
-      outlined: `border-2 border-${color}-500 text-gray-950 dark:text-gray-100 hover:bg-${color}-500 hover:text-white bg-transparent focus:ring-2 focus:ring-offset-2 focus:ring-${color}-500 focus:bg-${color}-500 focus:text-white`,
-      gradient: `bg-gradient-to-r from-${color}-700 via-${color}-600 to-${color}-500 hover:bg-gradient-to-tl hover:from-${color}-700 hover:via-${color}-600 hover:to-${color}-500 focus:ring-2 focus:ring-offset-2 focus:ring-${color}-500`,
+      transparent: `bg-transparent hover:bg-${color}-700 focus:ring-2 focus:ring-offset-2 focus:ring-${color}-500 focus:bg-${color}-500 focus:text-gray-800 focus:hover:text-white focus:dark:text-white hover:text-white `,
+      solid: `bg-${color}-500 hover:bg-${color}-700 text-white focus:ring-2 focus:ring-offset-2 focus:ring-${color}-500 focus:bg-${color}-500 focus:text-white hover:text-white `,
+      outlined: `border-2 border-${color}-500 text-gray-950 dark:text-gray-100 hover:bg-${color}-500 hover:text-white bg-transparent focus:ring-2 focus:ring-offset-2 focus:ring-${color}-500 focus:bg-${color}-500 focus:text-white text-gray-800 dark:text-gray-100 hover:text-white`,
+      gradient: `bg-transparent text-gray-800 dark:text-gray-100 hover:bg-gradient-to-tl hover:from-${color}-700 hover:via-${color}-600 hover:to-${color}-500 focus:ring-2 focus:ring-offset-2 focus:ring-${color}-500 hover:text-white `,
     };
     return (
       variantClasses[variant as keyof typeof variantClasses] ||
@@ -45,9 +42,15 @@ function MenuItem({
 
   return (
     <NavLink
-      className={`${children ? "gap-2" : ""} ${
-        iconOnly ? "justify-center text-xl aspect-square" : ""
-      } ${getColorClass()} ${getVariant()} text-gray-800 dark:text-white flex items-center transition-all ease-in-out duration-150 py-3 px-4 rounded-md active:bg-${color}-700`}
+      className={({ isActive }) =>
+        isActive
+          ? ` ${children ? "gap-2" : ""} ${
+              iconOnly ? "justify-center text-xl aspect-square" : ""
+            } ${getColorClass()} ${getVariant()} flex items-center transition-all ease-in-out duration-150 py-3 px-4 rounded-md`
+          : ` ${children ? "gap-2" : ""} ${
+              iconOnly ? "justify-center text-xl aspect-square" : ""
+            } ${getColorClass()} ${getVariant()} flex items-center transition-all ease-in-out duration-150 py-3 px-4 rounded-md`
+      }
       style={style}
       to={to}
     >

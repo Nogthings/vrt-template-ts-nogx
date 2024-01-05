@@ -11,9 +11,11 @@ import {
   IoArrowForward,
 } from "react-icons/io5";
 import { useContext } from "react";
+import { useLocation } from "react-router-dom"; // Importar el hook useLocation
 
 function Sidebar() {
   const { handleMenuToggle, menuCollapsed } = useContext(ToggleMenuContext);
+  const location = useLocation();
 
   const links = [
     {
@@ -33,11 +35,11 @@ function Sidebar() {
 
   return (
     <aside
-      className={`fixed left-4 top-4 bottom-4 flex flex-col rounded-md shadow-md bg-dark-100 dark:bg-dark-800 ${
+      className={`fixed left-6 top-6 bottom-6 flex flex-col rounded-md shadow-md bg-dark-100 dark:bg-dark-800 ${
         menuCollapsed ? "w-16" : "w-64"
       } transition-all ease-in-out duration-300`}
     >
-      <div className={`flex-grow px-${menuCollapsed ? 2 : 6} py-10`}>
+      <div className={`flex-grow px-${menuCollapsed ? 2 : 6} py-10 px-4`}>
         <div>
           <h1
             className={`text-2xl font-bold text-dark-800 dark:text-dark-100 ${
@@ -50,7 +52,7 @@ function Sidebar() {
             <p className="text-dark-500 dark:text-dark-300">Admin Dashboard</p>
           )}
         </div>
-        <ul className="mt-10 space-y-1">
+        <ul className="mt-10 space-y-2">
           {links.map((link, index) => (
             <li key={index}>
               <MenuItem
@@ -58,6 +60,7 @@ function Sidebar() {
                 title={menuCollapsed ? "" : link.title}
                 iconOnly={menuCollapsed}
                 color={link.color}
+                active={location.pathname === link.to}
               >
                 {link.icon}
               </MenuItem>

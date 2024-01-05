@@ -1,8 +1,11 @@
 import ContainerProps from "./types";
 
-function Container({ children }: Readonly<ContainerProps>) {
+function Container({ children, style, padding }: Readonly<ContainerProps>) {
   return (
-    <div className="p-4 lg:p-10 shadow-md bg-white dark:bg-black rounded-md">
+    <div
+      className={`p-[${padding}px] shadow-md bg-white dark:bg-black rounded-md`}
+      style={style}
+    >
       {children}
     </div>
   );
