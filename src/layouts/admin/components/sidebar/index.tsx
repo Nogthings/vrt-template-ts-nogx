@@ -35,7 +35,7 @@ function Sidebar() {
 
   return (
     <aside
-      className={`fixed left-6 top-6 bottom-6 flex flex-col rounded-md shadow-md bg-dark-100 dark:bg-dark-800 ${
+      className={`fixed left-6 top-6 bottom-6 flex flex-col rounded-md shadow-md bg-dark-100 dark:bg-dark-950 ${
         menuCollapsed ? "w-16" : "w-64"
       } transition-all ease-in-out duration-300`}
     >

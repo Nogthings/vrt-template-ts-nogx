@@ -9,7 +9,9 @@ function Box({ children, style }: Readonly<BoxProps>) {
 
   return (
     <div
-      className={`p-10 ${menuCollapsed ? "sm:ml-16" : "sm:ml-[17rem]"}`}
+      className={` py-6 pr-6 ${
+        menuCollapsed ? "sm:ml-[7rem]" : "sm:ml-[19rem]"
+      } transition-all ease-in-out duration-300`}
       style={style}
     >
       {children}

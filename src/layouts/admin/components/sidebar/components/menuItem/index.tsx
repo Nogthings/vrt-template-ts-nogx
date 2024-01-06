@@ -29,10 +29,10 @@ function MenuItem({
 
   const getVariant = () => {
     const variantClasses = {
-      transparent: `bg-transparent hover:bg-${color}-700 focus:ring-2 focus:ring-offset-2 focus:ring-${color}-500 focus:bg-${color}-500 focus:text-gray-800 focus:hover:text-white focus:dark:text-white hover:text-white `,
-      solid: `bg-${color}-500 hover:bg-${color}-700 text-white focus:ring-2 focus:ring-offset-2 focus:ring-${color}-500 focus:bg-${color}-500 focus:text-white hover:text-white `,
-      outlined: `border-2 border-${color}-500 text-gray-950 dark:text-gray-100 hover:bg-${color}-500 hover:text-white bg-transparent focus:ring-2 focus:ring-offset-2 focus:ring-${color}-500 focus:bg-${color}-500 focus:text-white text-gray-800 dark:text-gray-100 hover:text-white`,
-      gradient: `bg-transparent text-gray-800 dark:text-gray-100 hover:bg-gradient-to-tl hover:from-${color}-700 hover:via-${color}-600 hover:to-${color}-500 focus:ring-2 focus:ring-offset-2 focus:ring-${color}-500 hover:text-white `,
+      transparent: `bg-transparent hover:bg-${color}-700 focus:ring-2 focus:ring-offset-2 focus:ring-${color}-500 focus:bg-${color}-500 focus:text-gray-800 focus:hover:text-white focus:dark:text-white hover:text-white dark:text-gray-100`,
+      solid: `bg-${color}-500 hover:bg-${color}-700 text-white focus:ring-2 focus:ring-offset-2 focus:ring-${color}-500 focus:bg-${color}-500 focus:text-white hover:text-white dark:text-gray-100`,
+      outlined: `border-2 border-${color}-500 text-gray-950 dark:text-gray-100 hover:bg-${color}-500 hover:text-white bg-transparent focus:ring-2 focus:ring-offset-2 focus:ring-${color}-500 focus:bg-${color}-500 focus:text-white text-gray-800 dark:text-gray-100 hover:text-white dark:text-gray-100`,
+      gradient: `bg-transparent text-gray-800 dark:text-gray-100 hover:bg-gradient-to-tl hover:from-${color}-700 hover:via-${color}-600 hover:to-${color}-500 focus:ring-2 focus:ring-offset-2 focus:ring-${color}-500 hover:text-white dark:text-gray-100`,
     };
     return (
       variantClasses[variant as keyof typeof variantClasses] ||

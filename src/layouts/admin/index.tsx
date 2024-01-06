@@ -12,7 +12,10 @@ function AdminLayout() {
       <div className="bg-dark-50 dark:bg-dark-900 transition-all ease-in-out duration-300">
         <Sidebar />
         <Box>
-          <Container padding="10">
+          <Container
+            padding={2}
+            style={{ position: "sticky", zIndex: 50, top: 24 }}
+          >
             <Breadcrumb />
           </Container>
           <div className="py-4">
