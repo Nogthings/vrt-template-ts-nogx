@@ -3,6 +3,7 @@ import ContainerProps from "./types";
 function Container({
   children,
   style,
+  flex,
   padding,
   paddingR,
   paddingL,
@@ -29,9 +30,13 @@ function Container({
       .join(" ");
   };
 
+  const getFlex = () => {
+    return flex ? "flex items-center justify-between" : "";
+  };
+
   return (
     <div
-      className={`${getPaddingClasses()} shadow-md bg-white dark:bg-dark-950 rounded-md transition-all ease-in-out duration-300`}
+      className={`${getPaddingClasses()} ${getFlex()} shadow-md bg-white dark:bg-dark-950 rounded-md transition-all ease-in-out duration-300`}
       style={style}
     >
       {children}

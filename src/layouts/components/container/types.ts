@@ -8,6 +8,7 @@ interface ContainerProps {
   paddingB?: number;
   paddingX?: number;
   paddingY?: number;
+  flex?: boolean;
 }
 
 export default ContainerProps;

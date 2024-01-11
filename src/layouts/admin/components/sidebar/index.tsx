@@ -2,7 +2,6 @@
  * Made with ❤ by Nogx
  */
 import ToggleMenuContext from "../../providers/toggleMenu";
-import ToggleTheme from "../../../components/toggleTheme";
 import MenuItem from "./components/menuItem";
 import {
   IoArrowBack,
@@ -73,10 +72,9 @@ function Sidebar() {
           menuCollapsed ? "justify-center" : "justify-end"
         }`}
       >
-        <ToggleTheme />
         <button
           className={`flex items-center dark:text-white mb-2 hover:bg-primary-300 hover:text-white rounded-full aspect-square transition-all ease-in-out duration-300 text-xl p-1 rounded${
-            menuCollapsed ? " rounded mr-2" : ""
+            menuCollapsed ? " rounded " : ""
           }`}
           onClick={() => handleMenuToggle(!menuCollapsed)}
         >

@@ -5,6 +5,7 @@ import Box from "./components/box";
 import Breadcrumb from "./components/breadcrumb";
 import SpeedDial from "../components/speedDial";
 import Container from "../components/container";
+import ToggleTheme from "../components/toggleTheme";
 
 function AdminLayout() {
   return (
@@ -13,10 +14,12 @@ function AdminLayout() {
         <Sidebar />
         <Box>
           <Container
-            padding={2}
+            flex
+            padding={6}
             style={{ position: "sticky", zIndex: 50, top: 24 }}
           >
             <Breadcrumb />
+            <ToggleTheme />
           </Container>
           <div className="py-4">
             <Outlet />
